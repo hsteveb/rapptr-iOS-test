@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+            <connections>
+                <outlet property="animationButton" destination="9uL-ib-Ayk" id="ldi-Bd-aNe"/>
+                <outlet property="chatButton" destination="4Fa-5D-jYS" id="WQf-Sy-Tse"/>
+                <outlet property="loginButton" destination="6JX-Lv-AOm" id="IBa-KL-U4C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="RmO-o3-xhI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hq6-nn-hvl">
+                    <rect key="frame" x="30" y="227" width="315" height="213"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-5D-jYS" userLabel="UIButton" customClass="MainMenuButton" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="UIx-oL-ZW6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Chat">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressChatButton:" destination="-1" eventType="touchUpInside" id="vKS-9T-LMp"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JX-Lv-AOm" userLabel="UIButton" customClass="MainMenuButton" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="79" width="315" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Evk-VD-I3M"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressLoginButton:" destination="-1" eventType="touchUpInside" id="vMe-dG-aNn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uL-ib-Ayk" userLabel="UIButton" customClass="MainMenuButton" customModule="Rapptr_iOS_Test" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="158" width="315" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="d7Z-YZ-HKd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="Animation">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="didPressAnimationButton:" destination="-1" eventType="touchUpInside" id="J6O-uG-LwS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hq6-nn-hvl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="17B-Qm-T6n"/>
+                <constraint firstAttribute="trailing" secondItem="RmO-o3-xhI" secondAttribute="trailing" id="Rg3-hJ-FNs"/>
+                <constraint firstItem="hq6-nn-hvl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZGa-JW-GJU"/>
+                <constraint firstItem="RmO-o3-xhI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="apx-V7-TXK"/>
+                <constraint firstItem="RmO-o3-xhI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lZH-wg-8vJ"/>
+                <constraint firstAttribute="bottom" secondItem="RmO-o3-xhI" secondAttribute="bottom" id="lt9-I4-fvT"/>
+                <constraint firstAttribute="trailing" secondItem="hq6-nn-hvl" secondAttribute="trailing" constant="30" id="oV2-D0-t2C"/>
+                <constraint firstItem="hq6-nn-hvl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="zTi-oD-MiR"/>
+            </constraints>
+            <point key="canvasLocation" x="552.17391304347825" y="313.39285714285711"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="4Fa-5D-jYS">
+            <size key="intrinsicContentSize" width="33" height="30"/>
+        </designable>
+        <designable name="6JX-Lv-AOm">
+            <size key="intrinsicContentSize" width="38" height="30"/>
+        </designable>
+        <designable name="9uL-ib-Ayk">
+            <size key="intrinsicContentSize" width="69" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bg_home_menu" width="375" height="667"/>
+    </resources>
+</document>
