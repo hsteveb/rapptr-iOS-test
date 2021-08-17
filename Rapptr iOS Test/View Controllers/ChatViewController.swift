@@ -66,7 +66,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
+        //tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 0, right: 0)
     }
     
     // MARK: - UITableViewDataSource
@@ -77,8 +77,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell = nibs?[0] as? ChatTableViewCell
             cell?.setup()
         }
-        
-        //(cell?.viewWithTag(2) as? UILabel)?.backgroundColor = UIColor.green
+
         cell?.setCellData(message: messages![indexPath.row])
         return cell!
     }
@@ -88,9 +87,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: - UITableViewDelegate
-    /*func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }*/
     
     // MARK: - IBAction
 }

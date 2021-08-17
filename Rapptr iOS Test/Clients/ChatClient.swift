@@ -31,14 +31,19 @@ class ChatClient {
         
         self.session?.dataTask(with: url, completionHandler: { data, response, error in
             if error != nil {
-                errorHandler(error.debugDescription)
+                DispatchQueue.main.async {
+                    errorHandler(error.debugDescription)
+                }
+                
                 return
             }
             let decoder = JSONDecoder()
             guard let data = data ,
                   let chat = try? decoder.decode(Chat.self, from: data)
             else {
-                errorHandler("Could not decode data.")
+                DispatchQueue.main.async {
+                    errorHandler("Could not decode data.")
+                }
                 return
             }
             

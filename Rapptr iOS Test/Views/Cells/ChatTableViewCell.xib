@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,24 +19,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" distribution="fillProportionally" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Wcj-qR-FUF">
-                        <rect key="frame" x="16" y="0.0" width="71" height="201"/>
+                        <rect key="frame" x="16" y="16" width="86" height="201"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat" translatesAutoresizingMaskIntoConstraints="NO" id="riE-Z6-hN4">
-                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                <color key="backgroundColor" name="primary_blue"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="riE-Z6-hN4">
+                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="SHu-SN-p7w"/>
-                                    <constraint firstAttribute="width" constant="30" id="ULM-Pl-RRm"/>
+                                    <constraint firstAttribute="height" constant="45" id="SHu-SN-p7w"/>
+                                    <constraint firstAttribute="width" constant="45" id="ULM-Pl-RRm"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3LC-Vy-JFG">
-                                <rect key="frame" x="37" y="0.0" width="34" height="201"/>
+                                <rect key="frame" x="52" y="0.0" width="34" height="201"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FIq-Nx-FkM">
                                         <rect key="frame" x="-1" y="53" width="35" height="16"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="primary_black"/>
                                         <color key="highlightedColor" name="primary_black"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw9-fu-aLU">
@@ -45,12 +44,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKr-ne-Bkx">
                                                 <rect key="frame" x="8" y="8" width="19" height="20.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="primary_black"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="white"/>
                                         <constraints>
                                             <constraint firstItem="PKr-ne-Bkx" firstAttribute="leading" secondItem="aw9-fu-aLU" secondAttribute="leading" constant="8" id="AzL-1h-sMh"/>
                                             <constraint firstAttribute="bottom" secondItem="PKr-ne-Bkx" secondAttribute="bottom" constant="8" id="N5J-8y-w0P"/>
@@ -64,10 +64,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Wcj-qR-FUF" secondAttribute="bottom" id="2Fh-RD-pY9"/>
+                    <constraint firstAttribute="bottom" secondItem="Wcj-qR-FUF" secondAttribute="bottom" constant="8" id="2Fh-RD-pY9"/>
                     <constraint firstItem="Wcj-qR-FUF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RDx-59-NEQ"/>
                     <constraint firstAttribute="trailing" secondItem="Wcj-qR-FUF" secondAttribute="trailing" constant="36" id="UQ1-d1-yP5"/>
-                    <constraint firstItem="Wcj-qR-FUF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="w5g-Fd-vxU"/>
+                    <constraint firstItem="Wcj-qR-FUF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="w5g-Fd-vxU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -83,15 +83,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_chat" width="24" height="24"/>
         <namedColor name="primary_black">
             <color red="0.10588235294117647" green="0.11764705882352941" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="primary_blue">
-            <color red="0.054901960784313725" green="0.36078431372549019" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

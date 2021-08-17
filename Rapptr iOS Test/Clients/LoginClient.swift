@@ -42,11 +42,15 @@ class LoginClient {
         session?.uploadTask(with: request, from: data, completionHandler: { data, response, error in
             let endTime = (abs(startDate.timeIntervalSinceNow * 1000).rounded())
             if error != nil {
-                errorHandler(error.debugDescription)
+                DispatchQueue.main.async {
+                    errorHandler(error.debugDescription)
+                }
                 return
             }
             guard let data = data else {
-                errorHandler("Data nil")
+                DispatchQueue.main.async {
+                    errorHandler("Data nil")
+                }
                 return
             }
             let decoder = JSONDecoder()

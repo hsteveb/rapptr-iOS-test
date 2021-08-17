@@ -69,10 +69,6 @@ class AnimationViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if let center = self.imageOriginalCenter {
-                //self.logoUIImage.center = center
-        }
-        
     }
     
     // MARK: - Actions
@@ -80,6 +76,10 @@ class AnimationViewController: UIViewController {
     func logoButtonAction(sender: UIButton!) {
         self.logoActionButton.setTitle(self.fade ? self.fadeIn : self.fadeOut, for: .normal)
         let anim = UIViewPropertyAnimator(duration: 0.75, curve: .linear) {
+            if let originalCenter = self.imageOriginalCenter,
+               self.logoUIImage.center != originalCenter {
+                self.logoUIImage.center = originalCenter
+            }
             self.logoUIImage.alpha = self.fade ? 0.0 : 1.0
         }
         anim.startAnimation()

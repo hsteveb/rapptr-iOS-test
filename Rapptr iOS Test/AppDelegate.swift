@@ -16,30 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if #available(iOS 13.0, *) {
         } else {
-            //print("here")
             let window = UIWindow(frame: UIScreen.main.bounds)
             let navigationController = UINavigationController(rootViewController: MenuViewController(nibName: "MenuViewController", bundle: nil))
-            let image = UIImage()
-            navigationController.navigationBar.setBackgroundImage(image, for: .default)
-            navigationController.navigationBar.shadowImage = UIImage()
-            navigationController.navigationBar.isTranslucent = false
-            navigationController.navigationBar.barTintColor = UIColor(named: "primary_blue")
-            navigationController.navigationBar.barStyle = .black
-            navigationController.navigationBar.tintColor = UIColor(named: "white")
-            
-            //navigationController.navigationBar.clipsToBounds = false
-            
-            //navigationController.navigationBar.backgroundColor = UIColor(named: "primary_blue")
-            
-            
-            
-            
+            navigationController.setup()
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
             self.window = window
-           
         }
-        
         return true
     }
     

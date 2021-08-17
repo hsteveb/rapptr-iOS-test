@@ -5,6 +5,7 @@
 //  Copyright © 2020 Rapptr Labs. All rights reserved.
 
 import UIKit
+import SDWebImage
 
 class ChatTableViewCell: UITableViewCell {
     
@@ -32,6 +33,7 @@ class ChatTableViewCell: UITableViewCell {
     func setCellData(message: Message) {
         header.text = message.name
         body.text = message.message
+        self.userImage.sd_setImage(with: message.avatar_url, placeholderImage: UIImage())
     }
     
     func setup() {
@@ -42,5 +44,6 @@ class ChatTableViewCell: UITableViewCell {
         self.bodyView.layer.cornerRadius = 8
         self.bodyView.layer.borderWidth = 1
         self.bodyView.layer.borderColor = UIColor(named: "body_border")?.cgColor
+        self.userImage.layer.cornerRadius = self.userImage.frame.width / 2
     }
 }
